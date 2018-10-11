@@ -4,7 +4,7 @@ var megabytes = 0.0;
 var gigabytes = 0.0;
 var currentStorage = 1024 * 1024;
 var displayByte = byte.toFixed(0); //remove decimals (whats half a byte)
-var clickValue = 1;
+var clickValue = 16;
 
 var maxAmtChip1Hz = 16;
 var amtChip1Hz = 0;
