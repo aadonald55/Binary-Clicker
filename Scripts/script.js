@@ -95,7 +95,7 @@ function buyRam1kB(amt) {
     if (byte >= (costRam1kB * (Math.pow(2, amt) - 1)) && amtRam1kB < (maxAmtRam1Kb - 1)) {
         byte -= (costRam1kB * (Math.pow(2, amt) - 1));
         amtRam1kB += amt;
-        clickValue += amt;
+        clickValue += Math.pow(amt, 2);
         costRam1kB *= Math.pow(2, amt);
         fixDisplay();
     }
@@ -126,11 +126,11 @@ function buyRam1kB(amt) {
 
 function tick() {
     "use strict";
-    byte += amtChip1Hz / 10; //divide 10 due to interval being 10 times faster
+    byte += amtChip1Hz ; //divide 10 due to interval being 10 times faster
     updateByte();
 }
 
-var tickOnce = setInterval(tick, 100); //sets tick() interval
+var tickOnce = setInterval(tick, 50); //sets tick() interval
 
 //END LOOP
 
