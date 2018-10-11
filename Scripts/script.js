@@ -76,7 +76,7 @@ function updateByte() {
 
 function addByte() {
     "use strict";
-    byte += clickValue;
+    byte *= clickValue;
     updateByte();
 }
 
