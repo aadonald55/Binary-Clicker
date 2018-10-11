@@ -76,7 +76,7 @@ function updateByte() {
 
 function addByte() {
     "use strict";
-    byte *= clickValue;
+    byte += Math.pow(clickValue, 2);
     updateByte();
 }
 
